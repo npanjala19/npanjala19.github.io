@@ -24,18 +24,54 @@
     box-sizing: border-box;
 }
 
-ul {
-     list-style-type: none;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     align-items:center;
-     gap: 10px;
-     padding: 0;
-     margin: 0;
-     
-\
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
 }
+
+.skills-list li {
+    background-color:#6a0a0a;
+    color:white;
+    padding: 8px 15px;
+    border: 2px solid #6a0a0a;
+    border-radius: 15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-width:120px;      /* let width grow with content */
+    min-height:40px;      /* no fixed 200 × 100 box       */
+    font-weight:bold;
+}
+
+.project-list {
+    padding-inline-start: 1.25rem;   /* standard ol indent */
+    margin: 0 0 1.5rem 0;
+}
+
+.project-list li {
+    background-color: #e6b4b4;   /* light gray, change as you like */
+    border: 2px solid #6a0a0a;   /* optional: match your theme */
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* optional shadow */
+    display: block;       /* default block layout */
+    width: auto;
+    min-height: 0;
+    margin: 0 0 1.5rem 0; /* space between items  */
+    text-align: left;
+}
+
+.project-list h3 {
+    margin: 0 0 0.25rem 0;
+}
+
+
 
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -47,24 +83,16 @@ body {
     position: relative
 }
 
-li { 
 
-    background-color:#6a0a0a;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 15px;
-    border: 2px solid #6a0a0a; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-    font-weight: bold;
-    
-
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
 }
+
 
 
 
