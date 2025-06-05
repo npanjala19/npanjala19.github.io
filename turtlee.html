@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Niha Panjala - About me </title>
+        <link rel="stylesheet" href="tstyle.css">
+    </head>
+
+    <body>
+        <header> 
+            <h1> About the Project </h1>
+            <p> This project is an example of using factorization in code to create functions that draw composite shapes to draw a larger scene. I used functions I created to implement the scene that can implement parameters so that they're flexible.</p>
+        </header>
+       
+        <section> 
+            <h2> Sample Code </h2>
+            <p> This is an example of how my code utilizes functions to draw the scene. I use parameters to establish reusable functions. 't' is the turtle object, 'x' and 'y' are the horizontal and vertical coordinates. 'balloon_sizes' include the radius and diameter of the balloons and 'balloon_color' is a string indicating the balloon color. </p>
+
+            <div class="code-container">
+              <code>
+                <div><span class="keyword">def</span> <span class="function">draw_single_balloon</span><span class="parameters">(t, x, y, balloon_sizes, balloon_color)</span>:</div>
+                 <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments"># creates size and color changeable function</span></div>
+                 <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameters">offset = 0</span></div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments"># draw balloon</span></div>
+                   <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> <span class="parameters">size</span> <span class="keyword">in</span> <span class="parameters">balloon_sizes</span>:</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">jump_to</span><span class="parameters">(t, x + offset, y)</span></div>
+                 <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">draw_circle</span><span class="parameters">(t, size, fill_color=balloon_color)</span></div>
+                 <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments"># draw basket</span></div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">jump_to</span><span class="parameters">(t, (x-70), (y-40))</span></div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">draw_rectangle</span><span class="parameters">(t, 140, 110, fill_color="brown")</span></div>
+                   <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comments"># draw strings</span></div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">jump_to</span><span class="parameters">(t, x-70, y-40)</span></div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">draw_curve</span><span class="parameters">(t, 75, -60, 7)</span></div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">jump_to</span><span class="parameters">(t, x+15, y+3)</span></div>
+                 <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">draw_curve</span><span class="parameters">(t, 76, 60, 7)</span></div>
+</code>
+
+        </section>
+
+        <section>
+            <h2> Final Scene </h2>
+            <p> Here is the completed scene I coded including clouds, hot air balloons, and hills.</p>
+
+            <div class="scene-container">
+                <img src="pic.png" alt = 'Turtle Graphics Scene - green hills with two hot air balloons, one red and yellow and clouds against a blue sky.'>
+            </div>
+
+        </section>
+       
+        <section>
+            <p class = "scene-description">
+                This scene depicts two beautiful round green hills and four white cloud clusters. There is also two hot air balloons, one with a red balloon and a yellow balloon. All of this is against a blue sky. It is created by utilizing composite shapes created using turtle graphic functions; circles, rectangles, and curved lines. The clouds are created using layered circles and so are the hills. The balloons have their own function using the previously established functions."
+
+
+            </p>
+        </section>
+
+        <footer> 
+            <p> Created June 4th 2025 by Niha Panjala, CS101. </p>
+        </footer>
+        
+    </body>
+</html>
